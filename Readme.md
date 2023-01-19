@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Владимир Лопатин](https://up.htmlacademy.ru/htmlcss/36/user/2203931).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Панасюк](https://htmlacademy.ru/profile/sasha_oldsport).
 
 ---
 
