@@ -30,13 +30,53 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans" sans-serif;
   font-size: 18px;
   line-height: 21px;
 }
 
 /*Navigation*/
+
+.page-header {
+  display: flex;
+  width: 1200px;
+  height: 64px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.navigation {
+  display: flex;
+}
+
+.logo {
+  z-index: 10;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  width: 339px;
+  margin-left: auto;
+}
+
+.navigation-user {
+  display: flex;
+  justify-content: flex-end;
+  width: 268px;
+  margin-left: auto;
+}
 
 .navigation-link {
   font-weight: bold;
@@ -52,19 +92,34 @@ body {
 }
 
 /*Main*/
+.sedona {
+  display: none;
+}
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.background-img {
+  display: block;
+  width: 1200px;
+  height: 485px;
+  background: url(../images/Vector.svg) bottom,
+              url(../images/index-background.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
 
 .main-img {
-  background-image: url(../images/index-background.jpg);
-  background-size: 1200;
-  background-repeat: no-repeat;
+  padding: 51px 371px 82px;
 }
 
 li {
   list-style-type: none;
 }
 
-/*Advantages*/
+/*Advantages*/ /*Уменьшить отступы*/
 
 .advantages {
   font-family: "PT Sans";
@@ -72,17 +127,64 @@ li {
   text-align: center;
 }
 
+.advantages-about {
+  display: flex;
+  flex-direction: column;
+  height: 261px;
+  margin-top: 69px;
+  padding: 0;
+  gap: 25px;
+}
+
 .advantages-description {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 
 .advantages-title {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  padding-bottom: 69px;
+  margin: 0;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 385px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  word-wrap: break-word;
+}
+
+.advantages-photo {
+  margin: 0;
+  padding: 0;
+}
+
+.photo-1 {
+  height: 384px;
+}
+
+.photo-2 {
+  max-height: 100%;
 }
 
 .advantages-item-title {
@@ -102,6 +204,11 @@ li {
 .advantages-item:last-of-type {
   background-color: #82B3D3;
   color: #ffffff;
+  gap: 10px;
+}
+
+.advantages-item:first-of-type {
+  height: 384px;
 }
 
 .advantages-item:nth-of-type(even) {
@@ -114,11 +221,21 @@ li {
 
 .advantages-photo {
   width: 800px;
-  height: 400px;
+  height: 384px;
   background-repeat: no-repeat;
 }
 
-/*Features*/
+.advantages-line {
+  background: rgba(0, 0, 0, 0.3);
+  width: 60px;
+  height: 2px;
+}
+
+.advantages-line-light {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/*Features*/ /*Логотип сувениров обрезается*/
 
 .features {
   font-family: "PT Sans";
@@ -126,17 +243,48 @@ li {
   text-align: center;
 }
 
+.features-about {
+  display: flex;
+  flex-direction: column;
+  height: 246px;
+  margin: 0;
+  max-height: 246px;
+}
+
 .features-description {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  padding-top: 64px;
+  padding-bottom: 0;
+  margin: 0;
 }
 
 .features-title {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  padding-bottom: 64px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.features-item {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 385px;
+  max-height: 385px;
+  text-align: center;
+  margin: 0;
 }
 
 .features-item-title {
@@ -144,12 +292,16 @@ li {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 30px 0;
 }
 
 .features-item-description {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
 }
 
 .features-item:first-of-type,
@@ -157,12 +309,42 @@ li {
   background-color: rgba(131, 179, 211, 0.2)
 }
 
-/*Booking*/
+.features-icon {
+  display: flex;
+  align-self: center;
+  width: 75px;
+  height: 72px;
+  margin-top: 81px;
+}
+
+.features-home {
+  background-image: url(../images/Жилье.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features-food {
+  background-image: url(../images/food.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features-souvenir {
+  background-image: url(../images/Сувениры.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*Booking*/ /*Закончил*/
 
 .booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "PT Sans";
   font-style: normal;
   text-align: center;
+  padding: 96px 304px;
 }
 
 .booking-title {
@@ -170,12 +352,16 @@ li {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 
 .booking-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  margin-top: 20px;
+  margin-bottom: 54px;
 }
 
 .search-hotels {
@@ -185,18 +371,27 @@ li {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #756157;
+  width: 376px;
+  height: 52px;
+  border: 0;
+  border-radius: 4px;
 }
 
 /*Subscription*/
 
 .subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   font-family: "PT Sans";
   font-style: normal;
   text-align: center;
   color: #ffffff;
   background-image: url(../images/background-subscribe.png);
   background-repeat: no-repeat;
-  background-position: center;
+  width: 1200px;
 }
 
 .subscription-title {
@@ -230,37 +425,63 @@ li {
 
 /*Footer*/
 
+.page-footer {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  height: 120px;
+  margin: 0;
+  padding: 0;
+}
+
 /*social-media*/
 
 .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 142px;
+}
+
+.social-media-item {
   width: 47.33px;
+  height: 40px;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 .social-button {
   display: block;
-  width: 47.33px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 16px;
+  height: 30px;
 }
 
 .vkontakte {
   background-image: url(../images/vkontakte.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  width: 24px;
+  height: 14px;
 }
 
 .telegram {
   background-image: url(../images/telegram.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  width: 18px;
+  height: 16px;
 }
 
 .youtube {
   background-image: url(../images/youtube.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  width: 22px;
+  height: 17px;
 }
 
 /*contacts-phone*/
@@ -284,6 +505,7 @@ li {
   height: 33px;
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 70px;
 }
 
 .copyright {
