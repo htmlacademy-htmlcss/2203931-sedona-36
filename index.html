@@ -15,42 +15,40 @@
         <nav class="navigation">
             <ul class="navigation-list">
                 <li class="navigation-item">
-                    <a class="navigation-link" href="#">
+                    <a class="navigation-page" href="#">
                       Главная
                     </a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" href="about.html">
+                    <a class="navigation-about" href="about.html">
                       О Седоне
                     </a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" href="hotels.html">
+                    <a class="navigation-hotels" href="hotels.html">
                       Гостиницы
                     </a>
                 </li>
             </ul>
-            <ul class="navigation-list navigation-user">
-                <li class="navigation-item">
-                    <a class="navigation-link" href="#">
+            <ul class="navigation-user">
+                <li class="navigation-link">
+                    <a class="nav-search" href="#">
                         <span class="visually-hidden">
                           Поиск
                         </span>
                     </a>
                 </li>
-                <li class="navigation-item">
-                    <a class="navigation-link" href="#">
+                <li class="navigation-link">
+                    <a class="nav-favorite" href="#">
                         <span class="visually-hidden">
                           Избранное
                         </span>
                     </a>
                 </li>
-                <li class="navigation-item">
-                    <a class="navigation-link" href="#">
-                        <span class="visually-hidden">
-                          Забронировать
-                        </span>
-                    </a>
+                <li class="navigation-link">
+                    <button class="nav-button" type="button">
+                        ХОЧУ СЮДА!
+                    </button>
                 </li>
             </ul>
         </nav>
@@ -65,7 +63,7 @@
         <section class="advantages">
           <div class="advantages-about">
             <h2 class="advantages-description">
-                Седона - небольшой городок в Аризоне,
+                Седона &mdash; небольшой городок в Аризоне,
                 <br>
                 заслуживающий большего!
             </h2>
@@ -196,12 +194,13 @@
                 <br>
                 и мы покажем вам лучшие предложения гостиниц в Седоне
             </p>
-            <button class="search-hotels button" type="button">
+            <button class="search-hotels search-button" type="button">
                 Поиск гостиницы в Седоне
             </button>
         </section>
 
         <section class="subscription">
+          <div class="subscription-about">
            <h2 class="subscription-title">
                 Подпишитесь на рассылку
            </h2>
@@ -210,10 +209,11 @@
                 <br>
                 честное бойскаутское!
            </p>
-                <form class="subscription-form">
-                    <input class="subscription-email" type="text" name="email" placeholder="Ваш e-mail">
-                    <input class="subscription-button" type="submit" value="Подписаться">
-                </form>
+          </div>
+            <form class="subscription-form">
+                <input class="subscription-email" type="text" name="email" placeholder="Ваш e-mail">
+                <input class="subscription-button" type="submit" value="Подписаться">
+            </form>
         </section>
       </div>
     </main>
